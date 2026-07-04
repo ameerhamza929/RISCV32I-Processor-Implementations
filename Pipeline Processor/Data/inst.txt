@@ -1,0 +1,55 @@
+//0x03EAA423	sw x30 40(x21)
+23
+A4
+EA
+03
+//0x015A0C33	add x24 x20 x21
+33
+0C
+5A
+01
+//0x413C0933	sub x18 x24 x19
+33
+09
+3C
+41
+//0x018FECB3	or x25 x31 x24
+B3
+EC
+8F
+01
+//0x007C7BB3	and x23 x24 x7
+B3
+7B
+7C
+00
+//0x028AAB83	lw x23 40(x21)
+83
+AB
+8A
+02
+//0x01CBFC33	and x24 x23 x28
+33
+FC
+CB
+01
+//	0x017B63B3	or x7 x22 x23
+B3
+63
+7B
+01
+// 0x412B89B3	sub x19 x23 x18
+B3
+89
+2B
+41
+//0xFE0000E3	beq x0 x0 -32
+E3
+00
+00
+FE
+//0x00108093	addi x1 x1 1
+93
+80
+10
+00
