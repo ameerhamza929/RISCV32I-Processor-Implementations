@@ -1,0 +1,36 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 06/16/2026 02:34:54 PM
+// Design Name: 
+// Module Name: Inst_mem
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module Inst_mem(
+    input [31:0] PC,
+    output [31:0] inst    
+    );
+    
+    logic [7:0]inst_reg[0:31];       //Byte addressable
+    
+    initial begin
+        $readmemh("/home/pc-48/Ameer Processor Design Day 1/Ameer Processor Design Day 1.srcs/inst.txt", inst_reg); 
+    end
+    
+    assign inst = {inst_reg[PC+3],inst_reg[PC+2],inst_reg[PC+1],inst_reg[PC]};
+    
+endmodule
